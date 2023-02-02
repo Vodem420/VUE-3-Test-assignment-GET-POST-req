@@ -1,0 +1,41 @@
+:root {
+  /*Content Space*/
+  --HeaderH: 6rem;
+  --ContentWidth: 117rem;
+  --ContentWidthResponsive: 96%;
+
+  /*Colors*/
+  --White: #fff;
+  --Black: rgba(0, 0, 0, 0.87);
+  --Orange: #ff8d24;
+  --Green: #01c120;
+  --Warning: #cb3d40;
+  --Disabled: rgba(0, 0, 0, 0.4);
+  --Label: #7e7e7e;
+  --HelperText: #7e7e7e;
+
+  /*Button Colors*/
+  --BtnPrimary: #f4e041;
+  --BtnPrimaryHover: #ffe302;
+  --BtnDisabled: #b4b4b4;
+
+  /* Border Colors */
+  --BorderMain: #d0cfcf;
+  --BorderSecondary: #cdcdcd;
+  --BorderLight: #e1e1e1;
+
+  /*BG Colors*/
+  --BGLight-gray: #f8f8f8;
+  --BGBlue: #00bdd3;
+  --BGYellow: #f4e041;
+  --BGMain: #f8f8f8;
+  --BgWhite: #fff;
+
+  /*Bg Modal*/
+  --ModalBgWhite: #fff;
+  --ModalBackdrop: rgba(0, 0, 0, 0.2);
+
+  /*Box Shadow*/
+  --BshMain: rgba(0, 0, 0, 0.06);
+  --BshModal: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--HeaderH);
+  background-color: var(--BgWhite);
+  @include flex(flex, center);
+  z-index: 1;
+  img {
+    width: 10.4rem;
+    height: 2.6rem;
+  }
+  &__content {
+    @include flex(flex, center, space-between);
+    width: 100%;
+    max-width: var(--ContentWidth);
+    margin: 0 auto;
+  }
+  &__buttonWrapper {
+    @include flex(flex, center);
+    button {
+      width: 10rem;
+    }
+    :first-child {
+      margin-right: 1rem;
+    }
+  }
+  &__fix {
+    height: var(--HeaderH);
+  }
+}

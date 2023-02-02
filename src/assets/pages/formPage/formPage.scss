@@ -1,0 +1,87 @@
+.formPage {
+  .S1 {
+    background-image: url("/images/FormPage/S1__1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    max-width: var(--ContentWidth);
+    margin: 0 auto;
+    &__content {
+      @include flex(flex, center);
+      flex-direction: column;
+      padding: 16.4rem 0 16.3rem;
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 2.1rem;
+    }
+    p {
+      margin-bottom: 3.2rem;
+    }
+    button {
+      width: 10rem;
+    }
+  }
+  .S2 {
+    padding-top: 14rem;
+    text-align: center;
+    h1 {
+      padding-bottom: 5rem;
+      color: var(--Black);
+    }
+    p {
+      color: var(--Black);
+    }
+    &__list {
+      @include flex(flex, center, space-between);
+      flex-wrap: wrap;
+      max-width: var(--ContentWidth);
+      margin: 0 auto 5rem;
+      gap: 2.9rem;
+    }
+    .card-comp {
+      flex: 1 1 30%;
+    }
+    button {
+      width: 12rem;
+    }
+  }
+  .S3 {
+    padding-top: 14rem;
+    h1 {
+      color: var(--Black);
+      padding-bottom: 5rem;
+    }
+    form {
+      @include flex(flex, center);
+      flex-direction: column;
+      max-width: 38rem;
+      margin: 0 auto;
+      button {
+        width: 10rem;
+        margin-top: 5rem;
+      }
+    }
+    &__inputWrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 2rem;
+      margin-bottom: 5rem;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4rem;
+    text-align: center;
+    color: var(--White);
+  }
+  p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--White);
+  }
+}

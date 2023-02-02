@@ -1,0 +1,61 @@
+.radioButton {
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    + label {
+      &:before {
+        content: "";
+        background: transparent;
+        border-radius: 100%;
+        border: 1px solid var(--BorderMain);
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        margin-right: 1.2rem;
+        vertical-align: sub;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease;
+      }
+    }
+    &:checked {
+      + label {
+        &:before {
+          border-color: var(--BGBlue);
+          background: radial-gradient(
+            circle,
+            var(--BGBlue) 40%,
+            transparent 40%
+          );
+        }
+      }
+    }
+    &:focus {
+      + label {
+        &:before {
+          outline: none;
+          border-color: var(--BGBlue);
+        }
+      }
+    }
+  }
+  &__group {
+    width: 100%;
+    + .error {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: var(--Warning);
+    }
+  }
+  &__label {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--Black);
+    padding-bottom: 1.1rem;
+  }
+}
