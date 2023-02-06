@@ -10,8 +10,6 @@ import useVuelidate from "@vuelidate/core";
 import { required, minLength, maxLength } from "@vuelidate/validators";
 
 const items = ref([]);
-const selectedFile = ref(null);
-const selectedField = ref(null);
 const formData = reactive({
   name: "",
   email: "",
@@ -164,7 +162,7 @@ const onFileSelected = function (e) {
         <div class="S3__inputWrapper">
           <RadioButtonGroupComp
             id="profession"
-            v-model="selectedField"
+            v-model="formData.radio"
             :class="{
               error: v$.radio.$errors.length,
               '': v$.radio.$errors.length,
@@ -172,7 +170,6 @@ const onFileSelected = function (e) {
             :options="radioOptions.profession_options"
             label="Select your position"
           />
-          {{ selectedField }} - selected
           <span
             v-for="error in v$.radio.$errors"
             :key="error.$uid"

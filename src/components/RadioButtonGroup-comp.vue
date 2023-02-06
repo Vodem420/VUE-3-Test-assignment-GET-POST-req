@@ -1,6 +1,10 @@
 <script setup>
-const emit = defineEmits(["change", "input"]);
+const emit = defineEmits(["update:modelValue"]);
 defineProps({
+  modelValue: {
+    type: String,
+    default: null,
+  },
   id: {
     type: String,
     required: true,
@@ -23,8 +27,7 @@ defineProps({
   },
 });
 function radioButtonClick(value) {
-  emit("change", value);
-  emit("input", value);
+  emit("update:modelValue", value);
   console.log(value, "value");
 }
 </script>
@@ -43,9 +46,9 @@ function radioButtonClick(value) {
         type="radio"
         :value="option.value"
         :class="inputClass"
+        :checked="option.value === value"
         @change="radioButtonClick(option.value)"
       />
-      <!-- :checked="option.value === value" -->
       <label :for="id + index">{{ option.text }}</label>
       <slot v-if="option.value === value" :name="option.value" />
     </div>
